@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+<label style="display: inline-block; width: 280px; text-align: right; padding:2px;">
+    Username
+    <input name="username" value="{{username}}">
+    </input>
+</label>
+<span style="color: red;">{{error_name}}</span>
+<br>
+<label style="display: inline-block; width: 280px; text-align: right; padding:2px;">
+    Password
+    <input name="password" type="password" value="{{password}}"></input>
+</label>
+<span style="color: red;">{{error_pass}}</span>
+<br>
+<br>
+<input type="submit"></input>
+</form>
+{% endblock %}

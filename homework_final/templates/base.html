@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html style="font-family: sans-serif;">
+<head>
+    <title>My wiki pages</title>
+</head>
+<body stle="font-family: Impact, Charcoal, sans-serif;">
+<header>
+    <div>
+    {%if user %}
+        <a style="float: right;" href="/logout">Logout</a>
+    {%else%}
+        <a style="float: right;" href="/login">Login</a>
+        <a style="float: right;" href="/signup">Signup |</a>
+    {%endif%}
+    {%if user%}
+        {%if history%}
+            <a style="float: right;" href="/_history{{url}}">History |</a>
+        {%else%}
+            <a style="float: right;" href="{{url}}">View |</a>
+        {%endif%}
+        <a style="float: right;" href="/_edit{{url}}">Edit |</a>
+    {%endif%}
+    <a style="float: right;" href="/">Home |</a>
+    </div>
+</header>
+<div style="clear:both;height=0px;"></div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<table style="width:100%">
+  {%for ver in page_versions%}
+  <tr>
+    <td>{{ver['created']}}</td>
+    <td>{{ver['content']}}</td> 
+    <td>
+        <a href="{{url}}?v={{ver['idx']}}">view</a>
+    </td>
+    <td>
+        <a href="/_edit{{url}}?v={{ver['idx']}}">edit</a>
+    </td>
+  </tr>
+  {%endfor%}
+</table>
+
+{% endblock %}

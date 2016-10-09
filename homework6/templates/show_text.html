@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<hr>
+{%for input in inputs%}
+<h2><a href="/blog/{{input.key().id()}}">{{input.subject}}</a></h2>
+<p>{{input.date}}<p>
+<div>
+    <pre>{{input.content}}</pre>
+</div>
+<hr>
+{%endfor%}
+<div style="float:right;">queried {{queried_last}} seconds ago</div>
+{% endblock %}
